@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "e10f854c-1f95-419d-9a47-5b37a12025fc",
+		"name": "oauth2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "USER_CLIENT_APP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "USER_CLIENT_APP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiVVNFUl9DTElFTlRfUkVTT1VSQ0UiLCJVU0VSX0FETUlOX1JFU09VUkNFIl0sInVzZXJfbmFtZSI6ImFkbWluIiwic2NvcGUiOlsicm9sZV9hZG1pbiJdLCJhdGkiOiIzMjMwMzZmNS05YTk4LTRlY2YtYmRiOC0wYmY5YjgwOTFmMjMiLCJleHAiOjE1NTU0NDA1MjQsImF1dGhvcml0aWVzIjpbInJvbGVfYWRtaW4iLCJjYW5fdXBkYXRlX3VzZXIiLCJjYW5fcmVhZF91c2VyIiwiY2FuX2NyZWF0ZV91c2VyIiwiY2FuX2RlbGV0ZV91c2VyIl0sImp0aSI6ImE2NDkyZGQ3LTg1NzEtNDRhOS1iNjQ4LWI4YzdlYjhiZTBhMSIsImVtYWlsIjoid2lsbGlhbUBnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJVU0VSX0NMSUVOVF9BUFAifQ.Ak1aqrZgPAkha-7zuWvRzyW0ldVjYU4D27zRAZomht1vlNZvJwOTDrLF2rvk97haYTTuTpG2L1o9K0Dl3QQjlpTv0MWCAIIcwwLlGsvQlCUqrFMFu4u15zxQd0dDGyOASZaJmNdlBlLSgrLo70_IJ9r1U1mxb0-PLgMROUhVe4zshAQ1m67pmTMHSItrwvXZPR_2vLMkq1s47Fe1jv5iNOrkCU7rXYOLBeKCKFpRSQ3yhjMUreVb3KHcKb8lZKqJDs-aE62EkVJCLK27qLLRi-vFJyt_GcJickXHsTmfN8mcFKUmnDsI9SCogEkr5e_OYns7RCPDQAB9I34jZecX1g",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get resource",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiVVNFUl9DTElFTlRfUkVTT1VSQ0UiLCJVU0VSX0FETUlOX1JFU09VUkNFIl0sInVzZXJfbmFtZSI6ImFkbWluIiwic2NvcGUiOlsicm9sZV9hZG1pbiJdLCJleHAiOjE1NTU0NDE5MDgsImF1dGhvcml0aWVzIjpbInJvbGVfYWRtaW4iLCJjYW5fdXBkYXRlX3VzZXIiLCJjYW5fcmVhZF91c2VyIiwiY2FuX2NyZWF0ZV91c2VyIiwiY2FuX2RlbGV0ZV91c2VyIl0sImp0aSI6IjA2ODljYzU0LTEzY2MtNDgxYS05NTA3LTQ4YTg4ODQxM2Q0MyIsImVtYWlsIjoid2lsbGlhbUBnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJVU0VSX0NMSUVOVF9BUFAifQ.PLh2qxmBF9Jeeph1OVxFPX7tUQ0wNYIgpzJTLYN9w88YkSIq91i12eN0Xw9itnv7lBKnZI2_ccvnvn6jkq9-juzWslWIoCbX9ImD-o0DBOPRVbtL3IPvnmWqk_hRJ2kcvBDfkhXsglqq0WzWOv5DEe7gO43g4roafJebQx8NdPrP9zsdENBwjeFbePO60uB27ZlqzHct2CBPEP5ntB31giMe_MkC70-suMnJ2hABdzPQu0qaXKGU-2wRBEFIpHcjFWDZHcOFddHOYJt72KSyQ3fSMFxiEpJwE8yKKCC_z-Onq8qeQXP951X80pdE9QzurO_WtNLQDJdNL6tumA56RA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
