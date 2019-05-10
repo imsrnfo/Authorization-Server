@@ -28,8 +28,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile "org.springframework.boot:spring-boot-starter-web"
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version: '2.1.2.RELEASE'
-    //compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.5.RELEASE'
     compile "org.springframework.cloud:spring-cloud-starter-security"
     compile "mysql:mysql-connector-java"
-    compile "org.springframework.cloud:spring-cloud-dependencies"
+    //compile "org.springframework.cloud:spring-cloud-dependencies"
 }
