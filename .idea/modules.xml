@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Authorization-Server.iml" filepath="$PROJECT_DIR$/.idea/Authorization-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/authorizationserver.iml" filepath="$PROJECT_DIR$/.idea/modules/authorizationserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/authorizationserver_main.iml" filepath="$PROJECT_DIR$/.idea/modules/authorizationserver_main.iml" group="authorizationserver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/authorizationserver_test.iml" filepath="$PROJECT_DIR$/.idea/modules/authorizationserver_test.iml" group="authorizationserver" />
     </modules>
   </component>
 </project>
